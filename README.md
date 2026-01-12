@@ -1,0 +1,1 @@
+Hello! I hand drew, designed, and coded everything for this portfolio site! I used procreate, Adobe Dreamweaver, and Illustrator. The designs are inspired by Genshin Impact's card design, specifically from the Imaginarium Theater.
