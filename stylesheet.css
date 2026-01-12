@@ -1,0 +1,1061 @@
+@charset "UTF-8";
+/* CSS Document */
+ @import url("https://use.typekit.net/gfn3cfa.css"); /*minion*/
+ @import url("https://use.typekit.net/ryd8ijz.css"); /*skia*/
+ @import url("https://use.typekit.net/lnj5tuu.css"); /*poppins*/
+
+body {
+	background-color: #fff5e8;
+	 margin: 0; 
+	}
+/*General Styles*/
+img {max-width: 100%; height: auto;} /*don't let the img stretch*/
+
+h1 {color: #0a0a0a; font-family: "minion-pro", serif;
+font-weight: 600;
+font-style: normal;}
+
+h2 {color: #0a0a0a; font-family: "minion-pro", serif;
+font-weight: 400;
+font-style: normal;}
+
+h3 {color: #3b3b3b; font-family: "poppins", sans-serif;
+font-weight: 400;
+font-style: normal;text-align:center; font-size: 20px;
+    padding:0px;}
+
+
+p {color: #666666; font-family: "skia-cc", sans-serif;
+font-weight: 400;
+font-style: normal;text-align:center;font-size: 18px; margin-bottom: 0px;
+    padding:0px;}
+
+
+li {display:inline-block;}
+
+a:link {font-weight: 400; font-style: normal; color:#A23C3C; text-decoration:none; padding: 10px;} /*gets rid of default*/
+a:visited {color:#A23C3C;}
+a:hover {color:#f15060;}
+a:active{color:#A23C3C;}
+
+a.img{
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+/*For my intro*/
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;        /* remove the 40vh gap */
+  padding: 0.5rem 0;       
+  text-align: center;
+  margin-top: -30px;
+  flex-direction: column;  /* keeps nav centered */
+}
+
+.typing-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/*
+.typing-text {
+  max-width: 800px;
+  text-align: center;
+  white-space: nowrap;        /* typing effect 
+  overflow: hidden;
+  border-right: 2px solid #666;
+}
+
+@media (max-width: 768px) {
+  .typing-text {
+    white-space: normal;      /* allows wrapping 
+    border-right: none;       cursor looks weird on wrap 
+    text-align: center;
+  }
+}
+
+.typing-text {
+  font-family: "minion-pro", serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0a0a0a;
+
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #0a0a0a;
+
+  animation:
+    typing 3s steps(35, end) forwards,
+    blink 0.75s step-end infinite;
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 35ch; } /* number of characters 
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+} */
+
+.typing-text {
+  font-family: "minion-pro", serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0a0a0a;
+
+  overflow: hidden;
+  white-space: nowrap;             /* desktop: keep single line */
+  border-right: 2px solid #0a0a0a;
+
+  animation: typing 3s steps(35, end) forwards,
+             blink 0.75s step-end infinite;
+}
+
+/* Desktop typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 35ch; } /* matches character count */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .typing-text {
+    white-space: normal;      /* allows wrapping */
+    border-right: none;       /* cursor looks weird on wrap */
+    text-align: center;
+    animation: fadeIn 1s ease forwards; /* optional fade-in effect */
+    width: auto;              /* let text fill container */
+  }
+}
+
+/* Optional simple fade-in animation for mobile */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/*layout styles*/ 
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+ /*centers design in the screen*/
+#logo {width: 213px; margin-left: auto; margin-right: auto;} /*browser will calculate equal width left and right of the element*/
+
+
+/* CSS Document */
+
+/*First page*/
+section {
+	margin-top: 3rem;
+  text-align: center;
+  /*margin-top: 1rem;
+  display: flex;                
+  justify-content: center;      
+  align-items: center;        
+  flex-wrap: wrap;             
+  gap: 2rem;                     
+  text-align: center;*/
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box last-child {margin-right:0;}
+.box img {display:block;margin:0 auto;} /*to center images in the box*/
+
+nav{width:100%; margin-left:auto; margin-right:auto;}
+
+.video{aspect-ratio: 9/16;width: 100%;}
+
+/*desktop*/
+@media (min-width:768px)
+	{
+		nav {width:730.833px}
+		.box{width: 343px; border-radius: 8px; position:relative;}
+	}
+
+figure {margin:0;} /*gets rid of defaullt margin*/
+
+.box-container {text-align: center;}  /* centers the text under the box */
+figcaption p {text-align:center;}
+
+/* Make the 2 images appear side by side */
+/* Mobile first: STACK */
+body.two-images section {
+  display: flex;
+  flex-direction: row;        /* arrange items horizontally */
+  justify-content: center;    /* center the pair on the page */
+  align-items: center;        /* vertically align them */
+  gap: 40px;                  /* space between the two images */
+  margin-top: 40px;
+}
+
+/* Keep each image a good size */
+body.two-images .box {
+  width: 45%;                 /* each takes up about half the row */
+  max-width: 600px;           /* prevents them from getting too large */
+  text-align: center;
+}
+
+/* Ensure images resize nicely */
+body.two-images .box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#logo a {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+#logo a {
+  display: block;
+  width: 250px;              /* same size you already use */
+  aspect-ratio: 1 / 1;      /* adjust if your logo is not square */
+  background-image: url("design/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  padding: 0;
+  animation: rotateFloat 8s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Hover logo */
+#logo a:hover {
+	transform: rotate(6deg) scale(1.05);
+  background-image: url("design/logopink.png");
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* ← ACTUAL centering */
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* Default (red) image */
+.box.about a.img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4; /* adjust to match your image */
+  background-image: url("design/about.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Hover (pink) image */
+.box.about a.img:hover {
+  background-image: url("design/aboutpink.png");
+}
+
+/* Default (red) image */
+.box.works a.img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4; /* adjust to match your image */
+  background-image: url("design/works.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Hover (pink) image */
+.box.works a.img:hover {
+  background-image: url("design/workspink.png");
+}
+
+/* Default (red) image */
+.box.contact a.img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4; /* adjust to match your image */
+  background-image: url("design/contact.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Hover (blue) image */
+.box.contact a.img:hover {
+  background-image: url("design/contactpink.png");
+}
+
+/* Floating animation */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.box a.img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.box a.img:hover {
+  transform: translateY(-18px) scale(1.02);
+}
+
+.box a.img {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Stagger each one */
+.box:nth-child(1) a.img { animation-delay: 0s; }
+.box:nth-child(2) a.img { animation-delay: 1.5s; }
+.box:nth-child(3) a.img { animation-delay: 3s; }
+
+.box {
+  will-change: transform;
+}
+
+/*logo animation*/
+@keyframes rotateFloat {
+   0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(10deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/*Navigation*/
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-tabs {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.nav-tabs a {
+  display: block;
+  width: 260px;          /* desktop size */
+  max-width: 90vw;       /* prevents overflow on mobile */
+  aspect-ratio: 3 / 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+    /* [disabled]padding: 0; */
+
+.nav-tabs li {
+  list-style: none; /* just in case */
+  margin: 0;
+  padding: 0;
+  display: inline-block; /* keeps them horizontal */
+}
+
+nav li a:hover {
+ transform: translateY(-6px) scale(1.03);
+}
+
+nav li a {
+  display: inline-block;
+  animation: navFloat 5s ease-in-out infinite;
+  transition: transform 0.25s ease;
+  will-change: transform;
+  border: none;
+  background-color: transparent;
+}
+
+@keyframes navFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+nav li:nth-child(1) a { animation-delay: 0s; }
+nav li:nth-child(2) a { animation-delay: 1.2s; }
+nav li:nth-child(3) a { animation-delay: 2.4s; }
+
+
+nav li a.active_page {
+  animation: none;
+  transform: none;
+}
+
+.home-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .home-tabs {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .home-tabs .box {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+/* ABOUT – red */
+.nav-about {
+  filter: none; background-image: url("nav/aboutnav.png");
+}
+.nav-about:hover {
+  background-image: url("nav/aboutnavpink.png");
+}
+
+.nav-about.active_page {
+  background-image: url("nav/aboutnavpink.png");
+}
+
+.works-section {
+  display: flex;
+  justify-content: center;   /* centers the row */
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;           /* mobile-safe */
+  margin-top: 3rem;
+}
+
+.pgm-section {
+  display: flex;
+  justify-content: center;   /* centers the row */
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;           /* mobile-safe */
+  margin-top: 3rem;
+}
+
+
+
+.nav-works {
+  background-image: url("nav/worksnav.png");
+}
+.nav-works:hover {
+  background-image: url("nav/worksnavpink.png");
+}
+
+.nav-works.active_page {
+  background-image: url("nav/worksnavpink.png");
+}
+
+.nav-contact {
+  background-image: url("nav/contactnav.png");
+}
+.nav-contact:hover {
+  background-image: url("nav/contactnavpink.png");
+}
+
+.nav-contact.active_page {
+  background-image: url("nav/contactnavpink.png");
+}
+
+.pfp-container {
+  width: 400px;
+  height: 400px;
+  overflow: visible;
+  transform: translateY(-80px);
+}
+
+.pfp-container h1 {
+  font-size: 48px;        /* make it bigger */
+  font-weight: 700;      /* make it bolder */
+  margin-top: -8px;      /* pull it closer to the image */
+  line-height: 1.1;      /* tighter vertical spacing */
+}
+
+.pfp {
+  width: 100%;
+  height: 100%;
+  background-image: url("design/pfp.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+  transition: transform 0.3s ease;
+}
+
+section ul {
+  list-style: disc;
+  padding-left: 1.5rem;   /* brings bullets back into view */
+  text-align: left;
+}
+
+section li {
+  display: list-item;     /* restores bullets */
+  margin-bottom: 0.5rem;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* center the block */
+  margin-top: 4rem;
+}
+
+.about-text h3 {
+  margin-bottom: 0.5rem;     /* tight spacing above bullets */
+  text-align: center;
+}
+
+.about-text ul {
+  padding-left: 1.2rem;   /* controls bullet alignment */
+  margin-left: 0;
+  text-align: left;          /* readable list */
+}
+
+.about-text li {
+  display: list-item;
+ margin-bottom: 1rem;    /* space between items */
+  line-height: 1.5;
+   font-family: "skia-cc", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #666666;
+    text-align: left;      /* keep bullets aligned nicely */
+}
+
+.contact-container {
+  width: 400px;
+  height: 400px;
+  overflow: visible;
+  margin-top: -120px;
+}
+
+.contact-container h1 {
+  font-size: 48px;        /* make it bigger */
+  font-weight: 700;      /* make it bolder */
+  margin-top: -15px;      /* pull it closer to the image */
+  line-height: 1.1;      /* tighter vertical spacing */
+}
+
+.mail {
+  width: 100%;
+  height: 100%;
+  background-image: url("design/mail.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+  transition: transform 0.3s ease;
+}
+
+.contact-section {
+   display: flex;
+  flex-direction: column;
+  align-items: center;      /* ← THIS centers everything */
+  justify-content: center;
+  text-align: center;
+  margin-top: 0.5rem; /* or even 0 */
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;          /* space between email & LinkedIn */
+  margin-top: 150px;
+}
+
+.contact-buttons a {
+  animation: navFloat 5s ease-in-out infinite;
+}
+
+.contact-buttons a:nth-child(1) { animation-delay: 0s; }
+.contact-buttons a:nth-child(2) { animation-delay: 1.2s; }
+
+
+.email-btn {
+  display: block;
+  width: 150px;                 /* match your image size */
+  aspect-ratio: 5 / 2;          /* adjust to your image */
+  background-image: url("nav/email.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  transition: transform 0.25s ease;
+}
+
+.email-btn:hover {
+  background-image: url("nav/emailpink.png"); /* hover image */
+  transform: translateY(-6px) scale(1.03);
+}
+
+.linkedin-btn {
+  display: block;
+  width: 150px;                 /* match your image size */
+  aspect-ratio: 5 / 2;          /* adjust to your image */
+  background-image: url("nav/linkedin.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  transition: transform 0.25s ease;
+}
+
+.linkedin-btn:hover {
+  background-image: url("nav/linkedinpink.png"); /* hover image */
+  transform: translateY(-6px) scale(1.03);
+}
+
+
+/* Default (red) image */
+/* Default (red) image */
+.box.schoolproj a.img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4; /* adjust to match your image */
+  background-image: url("design/schoolproj.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Hover (pink) image */
+.box.schoolproj a.img:hover {
+  background-image: url("design/schoolprojpink.png");
+}
+
+.box.personalproj a.img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4; /* adjust to match your image */
+  background-image: url("design/personalproj.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Hover (pink) image */
+.box.personalproj a.img:hover {
+  background-image: url("design/personalprojpink.png");
+}
+
+
+
+/* Default (red) image */
+.box.pgm a.img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4; /* adjust to match your image */
+  background-image: url("design/pgm.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Hover (pink) image */
+.box.pgm a.img:hover {
+  background-image: url("design/PGMpink.png");
+}
+
+
+.pgm-container {
+  width: 400px;
+  height: 400px;
+  overflow: visible;
+  margin-top: -150px;
+}
+
+.pgm-container h1 {
+  font-size: 48px;        /* make it bigger */
+  font-weight: 700;      /* make it bolder */
+  margin-top: -8px;      /* pull it closer to the image */
+  line-height: 1.1;      /* tighter vertical spacing */
+}
+
+.pgmlogo {
+  width: 100%;
+  height: 100%;
+  background-image: url("design/pgmlogo.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+  transition: transform 0.3s ease;
+}
+
+
+.pgm-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* center the block */
+  margin-top: 150px;
+}
+
+.pgm-text h3 {
+  margin-bottom: 0.5rem;     /* tight spacing above bullets */
+  text-align: center;
+}
+
+.pgm-text ul {
+  padding-left: 1.2rem;   /* controls bullet alignment */
+  margin-left: 0;
+  text-align: left;          /* readable list */
+}
+
+.pgm-text li {
+  display: list-item;
+ margin-bottom: 1rem;    /* space between items */
+  line-height: 1.5;
+   font-family: "skia-cc", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #666666;
+    text-align: left;      /* keep bullets aligned nicely */
+}
+
+
+/*.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 3rem;
+  flex-wrap: wrap; /* mobile-safe 
+  align-items: flex-start;
+}*/
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;      /* KEY: allows stacking naturally */
+  margin-top: 3rem;
+}
+
+/*.gallery {
+  display: flex;
+  flex-direction: column;   /* stack on mobile 
+  align-items: center;      /* CENTER the images 
+  gap: 40px;
+}*/
+
+.gallery .box {
+  width: 300px;
+  text-align: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery figcaption {
+  margin-top: 1rem;
+}
+
+.gallery h2 {
+  font-size: 22px;
+  margin-bottom: 0.25rem;
+}
+
+.gallery-title {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery .box {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+
+.personalproj-container h1 {
+  font-size: 48px;        /* make it bigger */
+  font-weight: 700;      /* make it bolder */
+  margin-top: -8px;      /* pull it closer to the image */
+  line-height: 1.1;      /* tighter vertical spacing */
+}
+
+.video-gallery {
+  display: flex;
+  flex-direction: row;      /* SIDE BY SIDE on desktop */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;          /* allows wrapping if screen is tight */
+  margin-top: 3rem;
+}
+
+.portfolio-video {
+  width: 100%;
+  max-width: 300px;     /* BIGGER video */
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .portfolio-video {
+    max-width: 90%;
+  }
+}
+
+.portfolio-video {
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.portfolio-video:hover {
+  transform: scale(1.03);
+}
+
+.gallery .box.sage {
+  width: 600px;
+  max-width: 90%;
+}
+
+.portfolio-video.has-sound {
+  cursor: pointer;
+}
+
+.video-item .has-sound + figcaption::after {
+  content: "Click for sound";
+  display: block;
+  margin-top: 6px;
+
+  font-family: "skia-cc", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #666666;
+  text-align: center;
+}
+
+.slides-embed {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.slides-embed iframe {
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+.doc-embed {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.doc-embed iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 85vh;          /* important */
+  border: none;
+}
+
+.project-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;   /* ← allow wrapping if needed */
+}
+
+
+.mini-nav {
+  display: block;
+  width: 200px;        /* smaller so all 3 fit */
+  height: 80px;
+  background-size: contain;  /* IMPORTANT */
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.mini-nav:hover {
+  transform: translateY(-6px);
+}
+
+.project-nav a.mini-nav {
+  flex-shrink: 0;
+}
+
+
+.mini-nav.scaramouche {
+  background-image: url("nav/scaramouche.png");
+}
+
+.mini-nav.scaramouche:hover {
+  background-image: url("nav/scaramouchepink.png");
+}
+
+.mini-nav.digital {
+  background-image: url("nav/digitalart.png");
+}
+
+.mini-nav.digital:hover {
+  background-image: url("nav/digitalartpink.png");
+}
+
+.mini-nav.traditional {
+  background-image: url("nav/tradart.png");
+}
+
+.mini-nav.traditional:hover {
+  background-image: url("nav/tradartpink.png");
+}
+
+.mini-nav.lyric {
+  background-image: url("nav/booklet.png");
+}
+
+.mini-nav.traditional:hover {
+  background-image: url("nav/bookletpink.png");
+}
+
+.mini-nav.strawberry {
+  background-image: url("nav/strawberry.png");
+}
+
+.mini-nav.strawberry:hover {
+  background-image: url("nav/strawberrypink.png");
+}
+
+.mini-nav.digitalvid {
+  background-image: url("nav/vidproj.png");
+}
+
+.mini-nav.digitalvid:hover {
+  background-image: url("nav/vidprojpink.png");
+}
+
+.mini-nav.exhibit {
+  background-image: url("nav/exhibit.png");
+}
+
+.mini-nav.exhibit:hover {
+  background-image: url("nav/exhibitpink.png");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .project-nav {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.booklet-carousel {
+  width: 100%;
+  overflow: hidden;
+  margin: 4rem auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  padding: 2rem 10vw;
+}
+
+/* Hide scrollbar (optional, aesthetic) */
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track img {
+  height: 520px;
+  width: auto;
+
+  scroll-snap-align: center;
+  flex-shrink: 0;
+
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #b44;
+}
+
+.scroll-hint {
+  text-align: center;
+  font-size: 25px;
+  opacity: 0.6;
+  margin-top: 1rem;
+}
+
+/* Featured (Tamaki) video ONLY */
+.featured-video {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.featured-video .portfolio-video {
+  max-width: 720px;   /* bigger than others */
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .featured-video .portfolio-video {
+    max-width: 95%;
+  }
+}
+
+
+
+
